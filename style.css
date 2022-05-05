@@ -1,0 +1,251 @@
+@font-face {
+  font-family: "Pokemon Hollow";
+  src: url("fonts/PokemonHollow.ttf");
+  src: url("fonts/PokemonHollow.ttf") format("ttf"),
+}
+
+@font-face {
+  font-family: "Pokemon Solid";
+  src: url("fonts/PokemonSolid.ttf");
+  src: url("fonts/PokemonSolid.ttf") format("ttf"),
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: url(images/background.jpg) no-repeat center center/cover;
+  font-family: "Pokemon Hollow";
+}
+
+.top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+
+}
+
+.logo {
+  width: 22%;
+  height: 100%;
+
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+}
+
+
+.game-board {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  display: none;
+}
+
+.cards {
+  width: 93vmin;
+  height: 90vmin;
+  margin: auto;
+  display: grid;
+  grid-gap: 5%;
+  grid-template-columns: repeat(4, 1fr);
+  /* grid-template-rows: repeat(4, 1fr); */
+  perspective: 600px;
+}
+
+/** card front with pokemon image */
+.cardFront {
+  height: 30vmin;
+  border-radius: 20px;
+  padding: 5px;
+  box-shadow: 0 7px 7px 0 #FB1B1B;
+  border: 4px solid #FB1B1B;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+
+
+.cardFront .pokemonImg {
+  height: 17vmin;
+  object-fit: cover;
+}
+
+.cardFront .pokemonName {
+  font-weight: bold;
+  text-align: center;
+  color: #f4f4f4;
+  line-height: 1vmin;
+  transform: rotateY(180deg);
+  font-size: 1.4rem;
+
+}
+
+.cardFront .pokeBallImg {
+  height: 5vmin;
+  background: url(images/Pokeball.png);
+  object-fit: cover;
+}
+
+
+.cardFront:hover>.pokeBallImg {
+  animation: rotatePokeBall 0.6s ease-in-out both;
+}
+
+@keyframes rotatePokeBall {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/** Card back */
+.cardBack {
+  height: 30vmin;
+  border-radius: 20px;
+  padding: 5px;
+  border: 4px solid #c7a008;
+  box-shadow: 0 7px 7px 0 #c7a008;
+  background: url(images/cardBack4.jpg) center center/cover;
+  transition: 0.5s;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  backface-visibility: hidden;
+
+
+}
+
+.cardBack:hover {
+  border: 4px solid #2a75bb;
+  box-shadow: 0 7px 7px 0 #2a75bb;
+
+}
+
+.card {
+  position: relative;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  transition: transform 1s;
+  transform-origin: center right;
+  /* cursor: pointer; */
+
+}
+
+.cardFront,
+.cardBack {
+  width: 100%;
+  height: 26vmin;
+  position: absolute;
+}
+
+.cardFront:active,
+.cardBack:active {
+  pointer-events: none;
+}
+
+/* toggle card */
+.toggleCard {
+  /* transform: rotateY(180deg); */
+  transform: translateX(-90%) rotateY(-180deg);
+}
+
+.sideBar {
+  width: 30%;
+  display: flex;
+  gap: 10px;
+}
+
+.professor {
+  width: 30%;
+}
+
+.professor img {
+  width: 200px;
+  object-fit: contain;
+}
+
+/** Box Result */
+.boxResult {
+  width: 65%;
+  height: 550px;
+  margin-left: 10px;
+  background-color: #f4f4f4;
+  border: 3px solid #2a75bb;
+  box-shadow: 2px 12px 12px 2px #2a75bb;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.boxResult h1,
+.boxResult .correctMatch,
+.boxResult .unCorrectMatch {
+  margin: 0;
+}
+
+.boxResult h1 {
+  color: #2a75bb;
+  font-size: 2.4rem;
+  text-align: center;
+}
+
+.boxResult .correctMatch {
+  color: rgb(28, 152, 28);
+  margin-left: 5px;
+}
+
+.boxResult .unCorrectMatch {
+  color: red;
+  margin-left: 5px;
+}
+
+.boxResult #timer {
+  font-family: monospace, sans-serif;
+  font-size: 2rem;
+}
+
+.boxResult #newGameBtn {
+  margin: auto;
+  width: 20vmin;
+  height: 10%;
+  border-radius: 10px;
+  border: 4px solid #0075BE;
+  background-color: #FFCC00;
+  box-shadow: 2px 12px 12px 2px #0A285F;
+  color: #000000;
+  font-family: monospace, sans-serif;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+
+.boxResult #newGameBtn:hover {
+background-color: black;
+color: #fff;
+}
+
+.boxResult #msg {
+  font-size: 2.5rem;
+  color: rgb(28, 152, 28);
+  font-weight: bold;
+  
+}

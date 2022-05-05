@@ -1,0 +1,90 @@
+@media(max-width: 1450px) {
+  .logo {
+    display: none;
+  }
+  .game-board {
+    flex-direction: column;
+  }
+
+  .sideBar {
+    width: 100%;
+    margin-bottom: 5%;
+  }
+
+  /* .boxResult h1 {
+    display: none;
+  } */
+
+  .boxResult {
+    flex-direction: row;
+    width: 100%;
+    height: 60%;
+    justify-content: center;
+    align-items: center;
+    gap: 3%;
+  }
+
+  .professor {
+    display: none;
+  }
+
+  .professor img {
+    display: none;
+  }
+
+}
+
+@media(max-width: 1160px) {
+  body {
+    background: url(images/background.jpg) center center/cover;
+  }
+  .boxResult h1 {
+    display: none;
+  }
+
+  
+  .boxResult .correctMatch,
+  .boxResult .unCorrectMatch {
+    font-size: 1.5rem;
+  }
+}
+@media(max-width: 1050px) {
+  .boxResult .correctMatch,
+  .boxResult .unCorrectMatch {
+    font-size: 1.3rem;
+  }
+}
+@media(max-width: 960px) {
+  .boxResult .correctMatch,
+  .boxResult .unCorrectMatch {
+    font-size: 1.2rem;
+  }
+}
+@media(max-width: 904px) {
+  .boxResult .correctMatch,
+  .boxResult .unCorrectMatch {
+    font-size: 1.1rem;
+  }
+}
+@media(max-width: 670px) {
+  .boxResult .correctMatch,
+  .boxResult .unCorrectMatch {
+    font-size: 1rem;
+  }
+}
+@media(max-width: 610px) {
+  .boxResult .correctMatch,
+  .boxResult .unCorrectMatch {
+    font-size: 0.8rem;
+  }
+  .cards {
+    gap: 10%;
+  }
+  .toggleCard {
+    transform: translateX(-70%) rotateY(-180deg);
+  }
+  .cardFront .pokemonName {
+    font-size: 0.8rem;
+}
+}
+
