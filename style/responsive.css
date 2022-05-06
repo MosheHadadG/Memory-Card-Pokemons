@@ -36,7 +36,7 @@
 
 @media(max-width: 1160px) {
   body {
-    background: url(images/background.jpg) center center/cover;
+    background: url(../images/background.jpg) center center/cover;
   }
   .boxResult h1 {
     display: none;

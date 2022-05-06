@@ -1,19 +1,19 @@
 @font-face {
   font-family: "Pokemon Hollow";
-  src: url("fonts/PokemonHollow.ttf");
-  src: url("fonts/PokemonHollow.ttf") format("ttf"),
+  src: url("../fonts/PokemonHollow.ttf");
+  src: url("../fonts/PokemonHollow.ttf") format("ttf"),
 }
 
 @font-face {
   font-family: "Pokemon Solid";
-  src: url("fonts/PokemonSolid.ttf");
-  src: url("fonts/PokemonSolid.ttf") format("ttf"),
+  src: url("../fonts/PokemonSolid.ttf");
+  src: url("../fonts/PokemonSolid.ttf") format("ttf"),
 }
 
 body {
   margin: 0;
   padding: 0;
-  background: url(images/background.jpg) no-repeat center center/cover;
+  background: url(../images/background.jpg) no-repeat center center/cover;
   font-family: "Pokemon Hollow";
 }
 
@@ -89,7 +89,7 @@ body {
 
 .cardFront .pokeBallImg {
   height: 5vmin;
-  background: url(images/Pokeball.png);
+  background: url(../images/Pokeball.png);
   object-fit: cover;
 }
 
@@ -115,7 +115,7 @@ body {
   padding: 5px;
   border: 4px solid #c7a008;
   box-shadow: 0 7px 7px 0 #c7a008;
-  background: url(images/cardBack4.jpg) center center/cover;
+  background: url(../images/cardBack4.jpg) center center/cover;
   transition: 0.5s;
   cursor: pointer;
   display: flex;
