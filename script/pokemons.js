@@ -45,5 +45,13 @@ export const pokemons = [{
 {
   name: "Snorlax",
   image: "images/snorlax.png"
+},
+{
+  name: "Blastoise",
+  image: "images/blastoise.png"
+},
+{
+  name: "Rapidash",
+  image: "images/rapidash.png"
 }
 ]

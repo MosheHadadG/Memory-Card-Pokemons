@@ -8,10 +8,6 @@ export const gameBoard = document.querySelector('.game-board')
 // Click on Start Game button
 export function buttonStartGame() {
 startGameBtn.addEventListener('click', (event) => {
-  // startGameBackground.style.animation = 'myAnim 1s ease 0s 1 normal forwards'
-  // setTimeout(() => {
-  //   startGameBackground.style.display = 'none'
-  // }, 200);
   startGameScreen.style.display = 'none'
   topGameBoard.style.display = 'block'
   gameBoard.style.display = 'flex'

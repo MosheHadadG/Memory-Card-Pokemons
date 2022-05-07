@@ -9,7 +9,6 @@
   <link rel="stylesheet" href="style/startGame.css">
   <link rel="stylesheet" href="style/responsive.css">
   <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-  <script defer src="script/main.js" type="module"></script>
   <title>Memory Card Pokemon</title>
 </head>
 
@@ -45,18 +44,20 @@
           <h2 class="correctMatch">Correct Match: <span id="correct">0</span></h2>
           <h2 class="unCorrectMatch">Uncorrect Match: <span id="unCorrect">0</span></h2>
           <h2 id="timer">00:00</h2>
-          <button id="newGameBtn">New Game</button>
-          <div id="msg"></div>
+          <button id="newGameBoxResult" class="newGameBtn">New Game</button>
         </div>
         <div class="professor">
           <img src="images/professor.png" alt="">
         </div>
       </div>
       <div class="cards"></div>
+      <div class="msg">
+        <div class="msg-content"></div>
+      </div>
     </div>
   </div>
+  <script src="script/main.js" type="module"></script>
 
-  
 </body>
 
 </html>
